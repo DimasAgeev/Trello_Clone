@@ -1,0 +1,15 @@
+{
+  "name": "trello",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "parcel public/index.html --open",
+    "bild": "parcel build public/index.html --open"
+  },
+  "author": "Agee Dima <dimasageev1@gmail.com>",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}
