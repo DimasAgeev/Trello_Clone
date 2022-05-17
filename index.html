@@ -1,1 +1,154 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Trello_Clone</title><link rel="icon" href="/favicon.44a31d28.png"><link rel="stylesheet" href="/style.0d5679c3.css"><link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@700&family=Raleway:wght@400;500;600;700;900&display=swap" rel="stylesheet"></head><body> <div class="trello"> <div class="trello__heder"> <h2 class="trello__text">Trello</h2> <div class="trello__time"> <ul> <li id="hours">00</li> <li id="separator">:</li> <li id="minutes">00</li> <li id="separator">:</li> <li id="seconds">00</li> </ul> </div> </div> <div class="trello__row">  <div class="trello__column"> <div class="title-column"> <div class="title-column__text">TODO:</div> <div id="todo__number" class="title-column__number todo__number"></div> </div>  <div class="todo__column"></div>  <div class="footer-column"> <button class="addBtn btn__hover">Add todo</button> </div> </div>  <div class="trello__column-progress"> <div class="title-column"> <div class="title-column__text">IN PROGRESS:</div> <div id="progress__number" class="progress__number title-column__number"></div> </div>  <div class="progress__column"></div> <div id="progress__img"> <img src="/doneCat.6f05ff43.png" alt="cat"> </div>  </div>  <div class="trello__column-done"> <div class="title-column"> <div class="title-column__text">DONE</div> <div id="done__number" class="done__number title-column__number"></div> </div>  <div class="done__column"></div> <div id="done__img"> <img src="/doneCat.6f05ff43.png" alt="cat"> </div>  <div class="footer-column-done"> <button class="btn__hover deleteAllBtn">Delete all</button> </div> </div> </div> </div>  <div id="popup" class="popup"> <div class="popup__body"> <div class="popup__content"> <div class="popup__title"> <input id="input__title" type="text" maxlength="15" class="input__title" placeholder="Enter title"> </div> <div class="popup__description"> <input id="input__description" type="text" maxlength="100" class="input__description" placeholder="Enter description"> </div> <select name="Users" id="select" size="1"> <option disabled selected value="Исполнитель не назначен"> Select user </option> </select> <button class="btn__hover cancelBtn">Cancel</button> <button class="btn__hover confirmBtn">Confirm</button> </div> </div> </div>  <div id="edit" class="edit"> <div class="edit__body"> <div class="edit__content"> <div class="edit__title"> <input type="text" maxlength="15" class="editInput__title" placeholder="Enter title"> </div> <div class="edit__description"> <input type="text" maxlength="100" class="editInput__description" placeholder="Enter description"> </div> <select name="Users" id="selectEdit" size="1"> <option disabled selected value="Исполнитель не назначен"> Select user </option> </select> <button class="btn__hover cancelEditBtn">Cancel</button> <button class="btn__hover confirmEditBtn">Confirm</button> </div> </div> </div>  <div class="delete__all"> <div class="delete__body"> <div class="delete__content"> <p class="warning">Warning!!!</p> <button class="btn__hover warning__canselBtn">Cancel</button> <button class="btn__hover warning__confirmBtn">Confirm</button> </div> </div> </div>  <div class="limitation"> <div class="limitation__body"> <div class="limitation__content"> <p class="warning">Warning!!!</p> <button class="btn__hover limitation__canselBtn">Cancel</button> <button class="btn__hover limitation__confirmBtn">Confirm</button> </div> </div> </div> <script src="/scripts.d581f802.js" type="module"></script> </body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trello_Clone</title>
+    <link rel="icon" href="./favicon.44a31d28.png" />
+    <link rel="stylesheet" href="./style.0d5679c3.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@700&family=Raleway:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="trello">
+      <div class="trello__heder">
+        <h2 class="trello__text">Trello</h2>
+        <div class="trello__time">
+          <ul>
+            <li id="hours">00</li>
+            <li id="separator">:</li>
+            <li id="minutes">00</li>
+            <li id="separator">:</li>
+            <li id="seconds">00</li>
+          </ul>
+        </div>
+      </div>
+      <div class="trello__row">
+        <div class="trello__column">
+          <div class="title-column">
+            <div class="title-column__text">TODO:</div>
+            <div
+              id="todo__number"
+              class="title-column__number todo__number"
+            ></div>
+          </div>
+          <div class="todo__column"></div>
+          <div class="footer-column">
+            <button class="addBtn btn__hover">Add todo</button>
+          </div>
+        </div>
+        <div class="trello__column-progress">
+          <div class="title-column">
+            <div class="title-column__text">IN PROGRESS:</div>
+            <div
+              id="progress__number"
+              class="progress__number title-column__number"
+            ></div>
+          </div>
+          <div class="progress__column"></div>
+          <div id="progress__img">
+            <img src="./doneCat.6f05ff43.png" alt="cat" />
+          </div>
+        </div>
+        <div class="trello__column-done">
+          <div class="title-column">
+            <div class="title-column__text">DONE</div>
+            <div
+              id="done__number"
+              class="done__number title-column__number"
+            ></div>
+          </div>
+          <div class="done__column"></div>
+          <div id="done__img">
+            <img src="./doneCat.6f05ff43.png" alt="cat" />
+          </div>
+          <div class="footer-column-done">
+            <button class="btn__hover deleteAllBtn">Delete all</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="popup" class="popup">
+      <div class="popup__body">
+        <div class="popup__content">
+          <div class="popup__title">
+            <input
+              id="input__title"
+              type="text"
+              maxlength="15"
+              class="input__title"
+              placeholder="Enter title"
+            />
+          </div>
+          <div class="popup__description">
+            <input
+              id="input__description"
+              type="text"
+              maxlength="100"
+              class="input__description"
+              placeholder="Enter description"
+            />
+          </div>
+          <select name="Users" id="select" size="1">
+            <option disabled selected value="Исполнитель не назначен">
+              Select user
+            </option>
+          </select>
+          <button class="btn__hover cancelBtn">Cancel</button>
+          <button class="btn__hover confirmBtn">Confirm</button>
+        </div>
+      </div>
+    </div>
+    <div id="edit" class="edit">
+      <div class="edit__body">
+        <div class="edit__content">
+          <div class="edit__title">
+            <input
+              type="text"
+              maxlength="15"
+              class="editInput__title"
+              placeholder="Enter title"
+            />
+          </div>
+          <div class="edit__description">
+            <input
+              type="text"
+              maxlength="100"
+              class="editInput__description"
+              placeholder="Enter description"
+            />
+          </div>
+          <select name="Users" id="selectEdit" size="1">
+            <option disabled selected value="Исполнитель не назначен">
+              Select user
+            </option>
+          </select>
+          <button class="btn__hover cancelEditBtn">Cancel</button>
+          <button class="btn__hover confirmEditBtn">Confirm</button>
+        </div>
+      </div>
+    </div>
+    <div class="delete__all">
+      <div class="delete__body">
+        <div class="delete__content">
+          <p class="warning">Warning!!!</p>
+          <button class="btn__hover warning__canselBtn">Cancel</button>
+          <button class="btn__hover warning__confirmBtn">Confirm</button>
+        </div>
+      </div>
+    </div>
+    <div class="limitation">
+      <div class="limitation__body">
+        <div class="limitation__content">
+          <p class="warning">Warning!!!</p>
+          <button class="btn__hover limitation__canselBtn">Cancel</button>
+          <button class="btn__hover limitation__confirmBtn">Confirm</button>
+        </div>
+      </div>
+    </div>
+    <script src="./scripts.d581f802.js" type="module"></script>
+  </body>
+</html>
