@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "parcel public/index.html --open",
-    "bild": "parcel build public/index.html --open"
+    "bild": "parcel build public/index.html"
   },
   "author": "Agee Dima <dimasageev1@gmail.com>",
   "devDependencies": {
